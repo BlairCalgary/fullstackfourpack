@@ -7,7 +7,7 @@
 
 html {
     font-family: 'Poppins', sans-serif;
-    
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -73,8 +73,8 @@ nav {
 
 .buffer {
    display: block;
-   height: 137px;
-   margin-top: -137px;
+   height: 80px;
+   margin-top: -80px;
    visibility: hidden; 
 }
 
