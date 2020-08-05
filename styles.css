@@ -51,8 +51,17 @@ nav {
     min-width:260px;
     /* height: auto; */
     box-shadow: 10px -10px 0px 0px rgba(0,0,0,0.75);
+    opacity: 0;
+    transform: translateY(4em) rotate(-5deg);
+    transition: transform .6s,
+                opacity .6s;
+    will-change: transform, opacity;  
 }
 
+.imgFS4P.is-visible {
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
 
 @media screen and (max-width: 600px) {
     nav {
@@ -270,7 +279,10 @@ nav {
     width: 0;
     min-width: 200px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
 }
+
+
 
 .rightjustify {
     text-align: right;
@@ -298,10 +310,35 @@ nav {
 
 .skills {
     background: rgb(148,166,108);
+    
+}
+.slide-right {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: transform 1s, opacity 0.6s;
+    will-change: tranform, opacity;
+}
+
+.slide-right.is-visible {
+    opacity: 1;
+    transform: translateX(0em);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: transform 1s, opacity 0.6s;
+    will-change: tranform, opacity;
+}
+
+.slide-left.is-visible {
+    opacity: 1;
+    transform: translateX(0em);
 }
 
 .skillsBeer {
     background: rgb(204,216,176);
+
 }
 
 .personality {
