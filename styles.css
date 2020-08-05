@@ -96,6 +96,7 @@ nav {
     padding: 2.5em;
     background-color:rgb(60,179,113, 0.5);
     display: flex;
+    justify-content: space-between;
 }
 
 .textDiv {
@@ -106,8 +107,9 @@ nav {
 .imgDiv {
     border: 1px solid black;
     width: 35vw;
-    max-width: auto;
+    max-width: 250px;
     max-height: auto;
+    
 }
 
 .line1 {
