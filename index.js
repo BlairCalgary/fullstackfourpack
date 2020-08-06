@@ -1,37 +1,21 @@
-window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar").style.padding = "25px 10px";
     // document.getElementById("navbar").style.padding = "30px 10px";
     // document.getElementById("logo").style.fontSize = "20px";
+    // console.log("scroll");
   } else {
     document.getElementById("navbar").style.padding = "50px 10px";
     // document.getElementById("logo").style.fontSize = "25px";
+    // console.log("scroll");
   }
 }
+
+window.onscroll = function() {scrollFunction()};
 
 var scroll = window.requestAnimationFrame ||
   function(callback) {window.setTimeout(callback,1000/60)};
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
-
-function isElementInViewport (el) 
-{
-    //special bonus for those using jQuery
-    if (typeof jQuery !== 'undefined' && el instanceof jQuery) el = el[0];
-
-    var rect = el.getBoundingClientRect();
-    var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-    return (
-           (rect.left >= 0)
-        && (rect.top >= 0)
-        && ((rect.left + rect.width) <= windowWidth)
-        && ((rect.top + rect.height) <= windowHeight)
-    );
-
-}
 
 function isElementPartiallyInViewport(el)
 {
@@ -49,21 +33,6 @@ function isElementPartiallyInViewport(el)
 
     return (vertInView && horInView);
 }
-
-// function isElementInViewPort(el) {
-//   if (typeof jQuery === "function" && el instanceof jQuery) {
-//     el = el[0];
-//   } var rect = el.getBoundingClientRect();
-//   return (
-//     (rect.top <= 0 && rect.bottom >= 0)
-//     ||
-//     (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-//     rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-//     ||
-//     (rect.top >= 0 &&
-//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-//     );
-// }
 
 function loop() {
   elementsToShow.forEach(function (element) {
